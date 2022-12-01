@@ -29,30 +29,30 @@ class _CalculatorState extends State<Calculator> {
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             alignment: Alignment.centerRight, child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ), side: BorderSide(width: 1, color: Colors.deepOrange),
-                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-                setState(() {
-                  question='';
-                  question2='';
-                  equation='';
-                });
-              }, child: const Text(style: atb,'C')),),
-              Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
-              Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
-              Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
-                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-                setState(() {
-                  equation='/';
-                });
-              }, child: const Text(style: atb,'/')),),
-            ],),),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ), side: BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              setState(() {
+                question='';
+                question2='';
+                equation='';
+              });
+            }, child: const Text(style: atb,'C')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              setState(() {
+                equation='/';
+              });
+            }, child: const Text(style: atb,'/')),),
+          ],),),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
@@ -104,155 +104,155 @@ class _CalculatorState extends State<Calculator> {
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='4';
-                }
-                else {
-                  question+='4';
-                }
-              });
-            }, child: const Text(style: btb,'4')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='5';
-                }
-                else {
-                  question+='5';
-                }
-              });
-            }, child: const Text(style: btb,'5')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='6';
-                }
-                else {
-                  question+='6';
-                }
-              });
-            }, child: const Text(style: btb,'6')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                equation='-';
-              });
-            }, child: const Text(style: atb,'-')),),
-          ],),),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='4';
+                  }
+                  else {
+                    question+='4';
+                  }
+                });
+              }, child: const Text(style: btb,'4')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='5';
+                  }
+                  else {
+                    question+='5';
+                  }
+                });
+              }, child: const Text(style: btb,'5')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='6';
+                  }
+                  else {
+                    question+='6';
+                  }
+                });
+              }, child: const Text(style: btb,'6')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  equation='-';
+                });
+              }, child: const Text(style: atb,'-')),),
+            ],),),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='1';
-                }
-                else {
-                  question+='1';
-                }
-              });
-            }, child: const Text(style: btb,'1')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='2';
-                }
-                else {
-                  question+='2';
-                }
-              });
-            }, child: const Text(style: btb,'2')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='3';
-                }
-                else {
-                  question+='3';
-                }
-              });
-            }, child: const Text(style: btb,'3')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                equation='+';
-              });
-            }, child: const Text(style: atb,'+')),),
-          ],),),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='1';
+                  }
+                  else {
+                    question+='1';
+                  }
+                });
+              }, child: const Text(style: btb,'1')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='2';
+                  }
+                  else {
+                    question+='2';
+                  }
+                });
+              }, child: const Text(style: btb,'2')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='3';
+                  }
+                  else {
+                    question+='3';
+                  }
+                });
+              }, child: const Text(style: btb,'3')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  equation='+';
+                });
+              }, child: const Text(style: atb,'+')),),
+            ],),),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              setState(() {
-                if (equation != '') {
-                  question2+='0';
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                setState(() {
+                  if (equation != '') {
+                    question2+='0';
+                  }
+                  else {
+                    question+='0';
+                  }
+                });
+              }, child: const Text(style: btb,'0')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+                if (equation.contains('+')) {
+                  setState(() {
+                    var a = int.parse(question);
+                    var b = int.parse(question2);
+                    answer = (a + b).toString();
+                  });
                 }
-                else {
-                  question+='0';
+                else if (equation == '-') {
+                  setState(() {
+                    var a = int.parse(question);
+                    var b = int.parse(question2);
+                    answer = (a - b).toString();
+                  });
                 }
-              });
-            }, child: const Text(style: btb,'0')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
-            Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
-              if (equation.contains('+')) {
-                setState(() {
-                  var a = int.parse(question);
-                  var b = int.parse(question2);
-                  answer = (a + b).toString();
-                });
-              }
-              else if (equation == '-') {
-                setState(() {
-                  var a = int.parse(question);
-                  var b = int.parse(question2);
-                answer = (a - b).toString();
-                });
-              }
-              else if (equation == 'x') {
-                setState(() {
-                  var a = int.parse(question);
-                  var b = int.parse(question2);
-                  answer = (a * b).toString();
-                });
-              }
-              else if (equation == '/') {
-                setState(() {
-                  var a = int.parse(question);
-                  var b = int.parse(question2);
-                  answer = (a / b).toString();
-                });
-              }
-            }, child: const Text(style: atb,'=')),),
+                else if (equation == 'x') {
+                  setState(() {
+                    var a = int.parse(question);
+                    var b = int.parse(question2);
+                    answer = (a * b).toString();
+                  });
+                }
+                else if (equation == '/') {
+                  setState(() {
+                    var a = int.parse(question);
+                    var b = int.parse(question2);
+                    answer = (a / b).toString();
+                  });
+                }
+              }, child: const Text(style: atb,'=')),),
 
-          ],),),
+            ],),),
         ],),),);
   }
 }
