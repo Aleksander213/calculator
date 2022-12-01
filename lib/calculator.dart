@@ -14,27 +14,24 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-
+      body: SafeArea(child: Column(
         children: [
           Container(
             alignment:Alignment.centerRight, child:
           Column(children:
           [
+            const SizedBox(height: 30),
             Text(question + equation + question2, style: const TextStyle(fontSize: 28, color:Colors.orange)),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             Text(answer, style: const TextStyle(fontSize: 48, color: Colors.orange)),
           ],),),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.3),
+          const SizedBox(height: 195),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             alignment: Alignment.centerRight, child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-
               Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ),
-                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ), side: BorderSide(width: 1, color: Colors.deepOrange),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   question='';
@@ -44,15 +41,12 @@ class _CalculatorState extends State<Calculator> {
               }, child: const Text(style: atb,'C')),),
               Expanded(child:
               TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
-                  onPressed: () {}, child: const Text('')),),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
               Expanded(child:
               TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
-                  onPressed: () {}, child: const Text('')),),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
               Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   equation='/';
@@ -62,11 +56,9 @@ class _CalculatorState extends State<Calculator> {
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
@@ -78,8 +70,7 @@ class _CalculatorState extends State<Calculator> {
                 });
               }, child: const Text(style: btb,'7')),),
               Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
@@ -91,8 +82,7 @@ class _CalculatorState extends State<Calculator> {
                 });
               }, child: const Text(style: btb,'8')),),
               Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
@@ -104,8 +94,7 @@ class _CalculatorState extends State<Calculator> {
                 });
               }, child: const Text(style: btb,'9')),),
               Expanded(child:
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrange),
                   padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   equation='x';
@@ -117,8 +106,7 @@ class _CalculatorState extends State<Calculator> {
             child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -130,8 +118,7 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'4')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -143,8 +130,7 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'5')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -156,8 +142,7 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'6')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrange),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 equation='-';
@@ -167,11 +152,9 @@ class _CalculatorState extends State<Calculator> {
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -183,8 +166,7 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'1')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -196,8 +178,7 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'2')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -209,24 +190,22 @@ class _CalculatorState extends State<Calculator> {
               });
             }, child: const Text(style: btb,'3')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrange),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 equation='+';
               });
             }, child: const Text(style: atb,'+')),),
-              ],),),
+          ],),),
           Container(
             height: MediaQuery.of(context).size.height * 0.1,
             child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Expanded(child:
             TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)), onPressed: () {}, child: const Text('')),),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrange),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),side: BorderSide(width: 1, color: Colors.deepOrangeAccent),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -239,11 +218,9 @@ class _CalculatorState extends State<Calculator> {
             }, child: const Text(style: btb,'0')),),
             Expanded(child:
             TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
-                onPressed: () {}, child: const Text('')),),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),),
             Expanded(child:
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
-                side:const BorderSide(width: 1, color: Colors.deepOrange),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), side: BorderSide(width: 1, color: Colors.deepOrange),
                 padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               if (equation.contains('+')) {
                 setState(() {
@@ -275,7 +252,7 @@ class _CalculatorState extends State<Calculator> {
               }
             }, child: const Text(style: atb,'=')),),
 
-            ],),),
+          ],),),
         ],),),);
   }
 }
