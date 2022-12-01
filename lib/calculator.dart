@@ -25,9 +25,9 @@ class _CalculatorState extends State<Calculator> {
             const SizedBox(height: 20),
             Text(answer, style: const TextStyle(fontSize: 48, color: Colors.orange)),
           ],),),
-          const SizedBox(height: 195),
+          const SizedBox(height: 40),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.125,
             alignment: Alignment.centerRight, child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Expanded(child:
@@ -54,7 +54,7 @@ class _CalculatorState extends State<Calculator> {
             }, child: const Text(style: atb,'/')),),
           ],),),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.125,
             child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Expanded(child:
@@ -102,7 +102,7 @@ class _CalculatorState extends State<Calculator> {
               }, child: const Text(style: atb,'x')),),
             ],),),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.125,
             child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Expanded(child:
@@ -150,7 +150,7 @@ class _CalculatorState extends State<Calculator> {
               }, child: const Text(style: atb,'-')),),
             ],),),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.125,
             child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Expanded(child:
@@ -198,7 +198,7 @@ class _CalculatorState extends State<Calculator> {
               }, child: const Text(style: atb,'+')),),
             ],),),
           Container(
-            height: MediaQuery.of(context).size.height * 0.1,
+            height: MediaQuery.of(context).size.height * 0.125,
             child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Expanded(child:
