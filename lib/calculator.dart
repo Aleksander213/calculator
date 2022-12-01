@@ -14,35 +14,60 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Column(
+      body: SafeArea(
+        child: Column(
+
         children: [
-          Container(alignment:Alignment.centerRight, child:
+          Container(
+            alignment:Alignment.centerRight, child:
           Column(children:
           [
-            const SizedBox(height: 30),
             Text(question + equation + question2, style: const TextStyle(fontSize: 28, color:Colors.orange)),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Text(answer, style: const TextStyle(fontSize: 48, color: Colors.orange)),
           ],),),
-          const SizedBox(height: 195),
-          Container( alignment: Alignment.centerRight, child:
+          SizedBox(height: MediaQuery.of(context).size.height * 0.3),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            alignment: Alignment.centerRight, child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30 ),
+                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   question='';
                   question2='';
                   equation='';
                 });
-              }, child: const Text(style: atb,'C')),
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              }, child: const Text(style: atb,'C')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
+                  onPressed: () {}, child: const Text('')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
+                  onPressed: () {}, child: const Text('')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   equation='/';
                 });
-              }, child: const Text(style: atb,'/')),
+              }, child: const Text(style: atb,'/')),),
             ],),),
-          Container(child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
                     question2+='7';
@@ -51,8 +76,11 @@ class _CalculatorState extends State<Calculator> {
                     question+='7';
                   }
                 });
-              }, child: const Text(style: btb,'7')),
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              }, child: const Text(style: btb,'7')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
                     question2+='8';
@@ -61,8 +89,11 @@ class _CalculatorState extends State<Calculator> {
                     question+='8';
                   }
                 });
-              }, child: const Text(style: btb,'8')),
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              }, child: const Text(style: btb,'8')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   if (equation != '') {
                     question2+='9';
@@ -71,16 +102,24 @@ class _CalculatorState extends State<Calculator> {
                     question+='9';
                   }
                 });
-              }, child: const Text(style: btb,'9')),
-              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+              }, child: const Text(style: btb,'9')),),
+              Expanded(child:
+              TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                  side:const BorderSide(width: 1, color: Colors.deepOrange),
+                  padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
                 setState(() {
                   equation='x';
                 });
-              }, child: const Text(style: atb,'x')),
+              }, child: const Text(style: atb,'x')),),
             ],),),
-          Container(child:
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='4';
@@ -89,8 +128,11 @@ class _CalculatorState extends State<Calculator> {
                   question+='4';
                 }
               });
-            }, child: const Text(style: btb,'4')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'4')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='5';
@@ -99,8 +141,11 @@ class _CalculatorState extends State<Calculator> {
                   question+='5';
                 }
               });
-            }, child: const Text(style: btb,'5')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'5')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='6';
@@ -109,16 +154,25 @@ class _CalculatorState extends State<Calculator> {
                   question+='6';
                 }
               });
-            }, child: const Text(style: btb,'6')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'6')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 equation='-';
               });
-            }, child: const Text(style: atb,'-')),
+            }, child: const Text(style: atb,'-')),),
           ],),),
-          Container(child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            child:
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='1';
@@ -127,8 +181,11 @@ class _CalculatorState extends State<Calculator> {
                   question+='1';
                 }
               });
-            }, child: const Text(style: btb,'1')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'1')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='2';
@@ -137,8 +194,11 @@ class _CalculatorState extends State<Calculator> {
                   question+='2';
                 }
               });
-            }, child: const Text(style: btb,'2')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'2')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrangeAccent),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='3';
@@ -147,17 +207,27 @@ class _CalculatorState extends State<Calculator> {
                   question+='3';
                 }
               });
-            }, child: const Text(style: btb,'3')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'3')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 equation='+';
               });
-            }, child: const Text(style: atb,'+')),
-          ],),),
-          Container(child:
+            }, child: const Text(style: atb,'+')),),
+              ],),),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)), onPressed: () {}, child: const Text('')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
                   question2+='0';
@@ -166,9 +236,15 @@ class _CalculatorState extends State<Calculator> {
                   question+='0';
                 }
               });
-            }, child: const Text(style: btb,'0')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
+            }, child: const Text(style: btb,'0')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)),
+                onPressed: () {}, child: const Text('')),),
+            Expanded(child:
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30),
+                side:const BorderSide(width: 1, color: Colors.deepOrange),
+                padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               if (equation.contains('+')) {
                 setState(() {
                   var a = int.parse(question);
@@ -197,9 +273,9 @@ class _CalculatorState extends State<Calculator> {
                   answer = (a / b).toString();
                 });
               }
-            }, child: const Text(style: atb,'=')),
+            }, child: const Text(style: atb,'=')),),
 
-          ],),),
+            ],),),
         ],),),);
   }
 }
