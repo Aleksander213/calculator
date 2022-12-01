@@ -156,7 +156,7 @@ class _CalculatorState extends State<Calculator> {
           ],),),
           Container(child:
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)), onPressed: () {}, child: const Text('')),
             TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               setState(() {
                 if (equation != '') {
@@ -167,7 +167,7 @@ class _CalculatorState extends State<Calculator> {
                 }
               });
             }, child: const Text(style: btb,'0')),
-            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {}, child: const Text('')),
+            TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(45, 25, 45, 25)), onPressed: () {}, child: const Text('')),
             TextButton(style: TextButton.styleFrom(textStyle: const TextStyle(fontSize: 30), padding: const EdgeInsets.fromLTRB(35, 25, 35, 25)), onPressed: () {
               if (equation.contains('+')) {
                 setState(() {
